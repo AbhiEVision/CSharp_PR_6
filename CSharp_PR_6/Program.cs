@@ -4,7 +4,16 @@
 	{
 		static void Main(string[] args)
 		{
-			Console.WriteLine("Hello, World!");
+			Program program = new Program();
+			ProcessBusinessLogic processBusinessLogic = new ();
+			processBusinessLogic.ProcessCompleted += program.bl_ProcessCompleted;
+
+			processBusinessLogic.StartProcess();
+		}
+
+		public void bl_ProcessCompleted()
+		{
+			Console.WriteLine("Method Invoked!");
 		}
 	}
 }
