@@ -4,14 +4,13 @@
 	{
 		static void Main(string[] args)
 		{
-			Program program = new Program();
 			ProcessBusinessLogic processBusinessLogic = new ();
-			processBusinessLogic.ProcessCompleted += program.bl_ProcessCompleted;
+			processBusinessLogic.ProcessCompleted += bl_ProcessCompleted;
 
 			processBusinessLogic.StartProcess();
 		}
 
-		public void bl_ProcessCompleted()
+		public static void bl_ProcessCompleted()
 		{
 			Console.WriteLine("Method Invoked!");
 		}

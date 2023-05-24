@@ -19,7 +19,7 @@
 		{
 			if (ProcessCompleted != null)
 			{
-				ProcessCompleted();
+				ProcessCompleted?.Invoke();
 			}
 		}
 	}
